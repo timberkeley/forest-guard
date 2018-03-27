@@ -1,5 +1,6 @@
 export const API_URL = process.env.REACT_APP_API_URL || 'https://api.taiga.io/api/v1';
 export const BASE_URL = process.env.REACT_APP_BASE_URL || 'https://tree.taiga.io';
+export const AUTH_TYPE = process.env.REACT_APP_AUTH_TYPE || 'normal';
 
 let dueDates = {};
 if (process.env.REACT_APP_DUE_DATE_CUSTOM_ATTRIBUTES) {

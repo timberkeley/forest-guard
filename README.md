@@ -61,6 +61,8 @@ $ docker push registry.example.org/forest-guard:latest
 
 `REACT_APP_BASE_URL`: The URL of Taiga front-end (default to http://tree.taiga.io/)
 
+`REACT_TYPE_AUTH_TYPE`: The authentication type (default to normal)
+
 `REACT_APP_DUE_DATE_CUSTOM_ATTRIBUTES`: A JSON object that describes custom attributes used as due date field. The structure of the object is like so:
 
 ```

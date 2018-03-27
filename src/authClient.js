@@ -1,5 +1,5 @@
 import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_CHECK, AUTH_ERROR } from 'admin-on-rest';
-import { API_URL } from './consts';
+import { API_URL, AUTH_TYPE} from './consts';
 
 const setCurrentUser = (user) => {
   localStorage.setItem('token', user.auth_token);
@@ -18,7 +18,7 @@ export default (type, params) => {
         const { username, password } = params;
         const request = new Request(API_URL + '/auth', {
             method: 'POST',
-            body: JSON.stringify({ username, password, type: "normal" }),
+            body: JSON.stringify({ username, password, type: AUTH_TYPE }),
             headers: new Headers({ 'Content-Type': 'application/json' }),
         })
         return fetch(request)
