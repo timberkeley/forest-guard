@@ -8,11 +8,11 @@ import { BASE_URL } from '../consts';
 import CountProjects from './CountProjects';
 
 const style = { flex: 1 };
-
+const cardStyle = {width: '400px'};
 export default translate(({ projects = [], translate }) => (
     <div style={style}>
       <CountProjects value={projects.length} />
-      <Card>
+      <Card style={cardStyle}>
           <List>
               {projects.map(record =>
                   <ListItem
